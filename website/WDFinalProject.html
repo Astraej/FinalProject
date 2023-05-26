@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="pokemon.js">
+  <title>PLUSHIES</title>
+  <script src="pokemon.js"></script>
+</head>
+
+<body style = background-image: url('pikapika.jpg')>
+  <header>
+
+  </header>
+  <main>
+    <div class="PIKACHU">
+      <img src="C:\Users\Earl\Downloads\pikachu.png" width="300" height="370" alt="PIKACHU">
+      <h3>PIKACHU PLUSHIE</h3>
+      <p>Ash' First Pokemon Companion. Pikachu is yellow with brown stripes on its back, black-tipped ears, red electrical pouches on its cheeks, and has a lightning-bolt-shaped tail.</p>
+	  <p>12 inches Big Size</p>
+      <p>Price: 500PHP</p>
+      <button class="btn" onclick="addToCart('PIKACHI', 500)">Add to Pokeball</button>
+    </div>
+    <div class="product EEVEE">
+      <img src="C:\Users\Earl\Downloads\eevee.png" width="300" height="370" alt="EEVEE">
+      <h3>EEVEE</h3>
+      <p>Eevee is a mammalian creature with brown fur, a bushy tail that has a cream-colored tip, and a furry collar that is also cream-colored.</p>
+	  <p>12 inches Big Size</p>
+      <p>Price: 500PHP</p>
+      <button class="btn4" onclick="addToCart('EEVEE', 500)">Add to Pokeball</button>
+    </div>
+    <div class="product WOBBUFFET">
+      <img src="C:\Users\Earl\Downloads\39ef873377237f1a25729cb854d70669.png_720x720q80.png_.webp" width="300" height="370" alt="Wobbuffet">
+      <h3>WOBBUFFET</h3>
+      <p>Wobbuffet is a tall, cyan Pokémon with a soft body. Its eyes usually appear scrunched, and it has a jagged upper lip.</p>
+      <p>Price: 500PHP</p>
+      <button class="btn" onclick="addToCart('Wobbuffet', 500)">Add to Pokeball</button>
+    </div>
+    <div id="cart"></div>
+    <button class="btn1" onclick="displayCart()"><img src="C:\Users\Earl\Downloads\Poké_Ball_icon.svg.png" width="70" height="70"/></button>
+  </main>
+  <button class="btn3" onclick="checkout()">CHECKOUT</button>
+  <script>
+    var cartItems = [];
+    var totalPrice = 0;
+
+    function addToCart(product, price) {
+      cartItems.push(product);
+      totalPrice += price;
+      alert(product + " is added to Pokeball!");
+    }
+
+    function displayPokeBall() {
+      var PokeballElement = document.getElementById("pokeball");
+      pokeballElement.innerHTML = "";
+      for (var i = 0; i < cartItems.length; i++) {
+        var item = pokeballItems[i];
+        var itemElement = document.createElement("p");
+        itemElement.textContent = item;
+        cartElement.appendChild(itemElement);
+      }
+    }
+
+    function checkout() {
+      alert("Thanks for purchasing Pokemon(s)/! Total Price: " + "₱" + totalPrice );
+    }
+
+
+    function displayCart() {
+      alert("Product(s) in Pokeball: " + cartItems.join(", "));
+    }
+
+  </script>
+ 
+  
+
+  <footer>
+    <p> <b> <font face = "broadway">  <center> 
+    
+        <hr>
+        <table>
+  
+          <th>
+            <li>ABOUT</li>
+            <li>Material: Cotton</li>
+            <li>Texture: Silky Smooth</li>
+          </th>
+  
+          <th>
+            <li>SERVICES</li>
+            <li>Email: verybest@gmail.com</li>
+            <li>63+ 123456789</li>
+          </th>
+  
+        </table>
+  
+      
+  
+      
+  
+     
+  </footer>
+  </body>
+  </html>
